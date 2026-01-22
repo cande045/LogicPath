@@ -6,3 +6,10 @@ It blends interactive gameplay with educational content to make logic engaging, 
 LogicPath is a collaborative group project currently under active development.
 
 Team Website: https://github.com/p-scha/LogicPath-Team-Website
+
+# Members
+
+  - p-scha - Paul Schacht - pscha002@odu.edu
+  - trentthorne - Trent Thorne - ...
+  - cande045 - Caleb Anderson - ...
+  - ...
