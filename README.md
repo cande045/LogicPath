@@ -17,7 +17,7 @@ Install node.js and npm from the [nodejs official website](https://nodejs.org/en
 git clone https://github.com/p-scha/LogicPath.git
 
 # Navigate to project directory
-cd ./logic-path
+cd ./LogicPath/logic-path
 
 # Install dependencies
 npm install
