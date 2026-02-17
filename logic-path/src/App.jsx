@@ -3,15 +3,23 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import StartMenu from "./components/StartMenu.jsx";
+import Login from "./pages/Login.jsx";
+import Register from "./pages/Register.jsx";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <StartMenu />
-    </>
-  )
+   return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<StartMenu />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+    </Router>
+  );
+
 }
 
 export default App
