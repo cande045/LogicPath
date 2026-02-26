@@ -1,15 +1,17 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom"; // <-- import this
 import "./WorldMap.css";
 import worldMap from "../assets/world-map.png";
 
 const nodes = [
-  { id: "region-1", label: "Module 1", description: "Insert description here.", xPercent: 30, yPercent: 40 },
+  { id: "region-1", label: "Module 1", description: "Insert description here.", xPercent: 30, yPercent: 40, path: "/module_one" },
   { id: "region-2", label: "Module 2", description: "Insert description here.", xPercent: 55, yPercent: 25 },
   { id: "region-3", label: "Module 3", description: "Insert description here.", xPercent: 70, yPercent: 60 },
 ];
 
 export default function WorldMap() {
   const [selectedModule, setSelectedModule] = useState(null);
+  const navigate = useNavigate(); // <-- initialize navigate
 
   return (
     <div
@@ -29,8 +31,23 @@ export default function WorldMap() {
         <div className="module-panel">
           <h2>{selectedModule.label}</h2>
           <p>{selectedModule.description}</p>
-          <button className="start-btn">Start</button>
-          <button className="close-btn" onClick={() => setSelectedModule(null)}>Close</button>
+
+          <button
+            className="start-btn"
+            onClick={() => {
+              // Navigate to module_one route
+              navigate(selectedModule.path);
+            }}
+          >
+            Start
+          </button>
+
+          <button
+            className="close-btn"
+            onClick={() => setSelectedModule(null)}
+          >
+            Close
+          </button>
         </div>
       )}
     </div>
