@@ -54,12 +54,12 @@
   padding: 10px;
   border-radius: 8px;
   margin-top: 5px;
-  justify-content: space-between; /* pushes icon to the right */
+  justify-content: space-between; 
 }
 
 .input-field .icon {
-  margin-left: 10px;  /* space on left */
-  margin-right: 0;    /* remove old spacing */
+  margin-left: 10px;  
+  margin-right: 0;    
 }
 
 .input-field input {
